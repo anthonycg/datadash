@@ -8,17 +8,17 @@ export default function WeatherChart({ data }) {
         labels: data.map((item) => item.datetime), // Extract datetime labels
         datasets: [
             {
-                label: "Humidity",
-                data: data.map((item) => item.humidity), // Extract humidity data
+                label: "Rain",
+                data: data.map((item) => item.rain), // Extract humidity data
                 fill: false,
-                borderColor: "red",
+                borderColor: "dodgerBlue",
                 tension: 0.1,
             },
             {
                 label: "Wind Speed",
                 data: data.map((item) => item.wind_speed), // Extract wind speed data
                 fill: false,
-                borderColor: "dodgerBlue",
+                borderColor: "white",
                 tension: 0.1,
             },
         ],
@@ -38,7 +38,7 @@ export default function WeatherChart({ data }) {
                     y: {
                         title: {
                             display: true,
-                            text: "Humidity and Wind Speed",
+                            text: "Rain and Wind Speed",
                         },
                     },
                 },
